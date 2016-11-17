@@ -17,7 +17,7 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    response.flash = T("Hello World")
+    response.flash = T("Jordan Wall")
     return dict(message=T('Welcome To CollaboR8 an online music sharing experience!'))
 
 
