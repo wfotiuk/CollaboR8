@@ -10,7 +10,7 @@
 
 
 #trying to define a form
-def display_form():
+def Signup():
 	form = SQLFORM(db.Users)
 	
 	if form.process().accepted:
@@ -29,7 +29,6 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    form = display_form()
     #Test code to print all the items in the users table
     toprint = ''
     users = db().select(db.Users.ALL)
