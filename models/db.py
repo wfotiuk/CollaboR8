@@ -113,6 +113,11 @@ auth.settings.reset_password_requires_verification = True
 # Define your tables below (or better in another model file) for example
 #
 # >>> db.define_table('mytable', Field('myfield', 'string'))
+db.define_table('Users', Field('username','string',length = 20, requires = IS_NOT_EMPTY()), Field('password','string',length = 20, requires = IS_NOT_EMPTY()))
+
+#code for inserting a record into a table
+#db.Users.insert(username='APolowy', password='Hello34')
+
 #
 # Fields can be 'string','text','password','integer','double','boolean'
 #       'date','time','datetime','blob','upload', 'reference TABLENAME'

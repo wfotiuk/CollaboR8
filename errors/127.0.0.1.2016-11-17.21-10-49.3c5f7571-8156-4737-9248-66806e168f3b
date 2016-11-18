@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.TypeError'> cannot concatenate 'str' and 'Query' objects"
+p3
+sS'layer'
+p4
+S'E:\\web2py\\applications\\CollaboR8\\compiled\\views_default_index.html.pyc'
+p5
+sS'code'
+p6
+S'<code object <module> at 07506728, file "E:/web2py/applications/CollaboR8\\compiled\\views_default_index.html.py", line 1>'
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "E:\\web2py\\gluon\\restricted.py", line 227, in restricted\n    exec ccode in environment\n  File "E:/web2py/applications/CollaboR8\\compiled\\views_default_index.html.py", line 53, in <module>\n  File "E:\\web2py\\gluon\\languages.py", line 426, in __len__\n    return len(str(self))\n  File "E:\\web2py\\gluon\\languages.py", line 389, in __str__\n    self.T.translate(self.m, self.s))\n  File "E:\\web2py\\gluon\\languages.py", line 935, in translate\n    lambda: self.get_t(message))\n  File "E:\\web2py\\gluon\\languages.py", line 149, in get_from_cache\n    result = lang_dict.setdefault(val, fun())\n  File "E:\\web2py\\gluon\\languages.py", line 935, in <lambda>\n    lambda: self.get_t(message))\n  File "E:\\web2py\\gluon\\languages.py", line 807, in get_t\n    key = prefix + message\nTypeError: cannot concatenate \'str\' and \'Query\' objects\n'
+p11
+s.

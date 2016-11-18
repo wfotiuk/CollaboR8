@@ -9,6 +9,18 @@
 # -------------------------------------------------------------------------
 
 
+#trying to define a form
+def display_form():
+	form = SQLFORM(db.Users)
+	
+	if form.process().accepted:
+   		response.flash = 'form accepted'
+	elif form.errors:
+   		response.flash = 'form has errors'
+	else:
+   		response.flash = 'please fill out the form'
+
+	return dict(form = form)
 def index():
     """
     example action using the internationalization operator T and flash
@@ -17,10 +29,16 @@ def index():
     if you need a simple wiki simply replace the two lines below with:
     return auth.wiki()
     """
-    response.flash = T("Hello World")
+    form = display_form()
+    #Test code to print all the items in the users table
+    toprint = ''
+    users = db().select(db.Users.ALL)
+    for row in users:
+    	toprint += row.username + ' ' + row.password + ' '
+    
+    response.flash = T(toprint)
     return dict(message=T('Welcome To CollaboR8 an online music sharing experience!'))
-
-
+	
 def user():
     """
     exposes:
